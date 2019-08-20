@@ -1,7 +1,5 @@
 body {
   position: relative;
-  width: 1440px;
-  height: 900px;
   background: #FFFFFF;
 }
 
@@ -15,57 +13,53 @@ nav {
 
 nav * {
   position: relative;
-  top:25%;
+  top: 25%;
 }
 
 nav i {
   margin-right: 24px;
 }
 
-.sheets {
+.bucket:hover, .choose-color:hover, .move:hover, .transform:hover {
+  background-color: rgb(214, 214, 214);
+  cursor: pointer;
+}
+
+.sheets, .colors {
   position: absolute;
-  width: 228px !important;
-  height: 246px;
+  width: 25% !important;
   left: 29px;
-  top: 127px;
   border: 1px solid black;
   box-shadow: 0 6px 3px -3px gray;
 }
 
-.bucket:hover {
-  background-color: rgb(214, 214, 214);
-  cursor: pointer;
+.sheets {
+  top: 127px;
 }
 
-.choose-color:hover {
-  background-color: rgb(214, 214, 214);
-  cursor: pointer;
+.sheets::before, .colors::before {
+  content: '';
+  width: 100%;
+  border-bottom: solid 1px black;
+  position: absolute;
+  left: 0;
+  top: 50%;
 }
 
-.move:hover {
-  background-color: rgb(214, 214, 214);
-  cursor: pointer;
-}
-
-.transform:hover {
-  background-color: rgb(214, 214, 214);
-  cursor: pointer;
-}
-
-.sheets ul {
+.sheets ul, .colors ul {
   padding-left: 0px;
 }
 
-.sheets li {
-  height: 48px;
+.sheets li, .colors li {
+  margin: 4% 0;
 }
 
-.sheets span, .sheets li > i  {
+.sheets span, .sheets li>i {
   position: relative;
   top: 25%;
 }
 
-.sheets li > i {
+.sheets li>i {
   height: 24px;
   width: 24px;
 }
@@ -74,41 +68,8 @@ nav i {
   padding-right: 0 !important;
 }
 
-.divide-one:before {
-  content: '';
-  width: 100%;
-  border-bottom: solid 1px black;
-  position: absolute;
-  left: 0;
-  top: 25%;
-
-}
-
-.divide-two:before {
-  content: '';
-  width: 100%;
-  border-bottom: solid 1px black;
-  position: absolute;
-  left: -15px;
-  top: 25%;
-}
-
 .colors {
-  position: absolute;
-  width: 228px !important;
-  height: 246px;
-  left: 29px;
   top: 465px;
-  border: 1px solid black;
-  box-shadow: 0 6px 3px -3px gray;
-}
-
-.colors ul {
-  padding-left: 0px;
-}
-
-.colors li {
-  height: 48px;
 }
 
 .colors span, .colors div {
@@ -125,21 +86,7 @@ nav i {
   padding: 0 !important;
 }
 
-.current-color:hover {
-  background-color: rgb(214, 214, 214);
-  cursor: pointer;
-}
-.prev-color:hover {
-  background-color: rgb(214, 214, 214);
-  cursor: pointer;
-
-}
-.red-color:hover {
-  background-color: rgb(214, 214, 214);
-  cursor: pointer;
-}
-
-.blue-color:hover {
+.current-color:hover, .prev-color:hover, .red-color:hover, .blue-color:hover {
   background-color: rgb(214, 214, 214);
   cursor: pointer;
 }
@@ -162,22 +109,23 @@ nav i {
 }
 
 .canvas {
-  position: absolute;
-  width: 725px !important;
-  height: 731px;
-  left: 674px;
-  top: 127px;
+  position: relative;
+  width: 33.33333333333vw !important;
+  height: 33.333333333333333vw;
+  top: 79px;
   background-color: none !important;
   padding: 0 !important;
 }
 
 .canvas ul {
   height: 100%;
-  padding-left: 15px;
+  padding: 0;
   background-color: none !important;
 }
 
 .canvas li {
+  width: 100%;
+  margin: 0;
   height: 33.33333%;
   background-color: none !important;
 }

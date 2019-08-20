@@ -107,7 +107,7 @@ const redBlueEvent = color => () => {
 };
 
 // -----removeEvents after choose another sheet tool-----
-function removeEvents() {
+const removeEvents = () => {
   canvas.removeEventListener('click', bucketEvent);
   canvas.removeEventListener('click', pipetteEvent);
   canvas.removeEventListener('click', transformEvent);
